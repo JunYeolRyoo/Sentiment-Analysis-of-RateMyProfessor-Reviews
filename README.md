@@ -32,6 +32,9 @@ python main.py
 - Frequency Distribution: Identified language patterns in reviews.
 - Naive Bayes Classifier: Trained an initial model using a dataset of 5,000 reviews, with 1,000 reviews for each rating category (1 to 5).
 
+Example of identifying language patterns (most frequently occurring words right after the word "extremely" in each rating):
+![](images/LanguagePattern.bmp)
+
 ### Iterative Improvements:
 1. Trigram Frequency Distribution: Improved accuracy by considering the two preceding words based on the predicted label from the Naive Bayes classifier.
 2. Selective Sampling: Used trigram frequency distributions to selectively sample and obtain more useful training data.
