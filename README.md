@@ -36,3 +36,26 @@ python main.py
 1. Trigram Frequency Distribution: Improved accuracy by considering the two preceding words based on the predicted label from the Naive Bayes classifier.
 2. Selective Sampling: Used trigram frequency distributions to selectively sample and obtain more useful training data.
 3. Combined Approach: Merged trigram frequency distribution and selective sampling for final improvements.
+
+### Results:
+The iterative process showed gradual improvements in classifier accuracy:
+1. First Iteration: 42.49% (used only the Naive Bayes classifier).
+2. Second Iteration: 43.4% (applied trigram frequency distribution on the predicted labels from the classifier).
+3. Third Iteration: 45.46% (recollected training data through selective sampling and then used the Naive Bayes classifier).
+4. Fourth Iteration: 47.05% (combined the Naive Bayes classifier with the trigram frequency distribution).
+
+
+Overall Accuracy of the Classifier through each process:
+
+![](images/OverallAccuracy.bmp)
+
+Classifier's accuracy in accurately predicting reviews with each rating:
+![](images/AccuracyPerRating.bmp)
+
+### Challenges:
+Runtime Delays: Optimized the scraping process to handle large datasets efficiently.
+Vague and Sarcastic Reviews: The classifier struggled to accurately categorize subtle and sarcastic reviews. Additionally, the presence of five distinct rating categories (1 to 5), as opposed to the traditional binary sentiment analysis (positive and negative), made improving the classifier's accuracy significantly more challenging.
+
+### Future Work:
+- Implement additional NLP methods to enhance the model’s accuracy.
+- Develop a domain-independent model for broader applicability.
